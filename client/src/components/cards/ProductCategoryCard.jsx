@@ -8,8 +8,8 @@ const Card = styled.div`
   gap: 16px;
   transition: all 0.3s ease-out;
   cursor: pointer;
-  @media (max-width: 500px) {
-    width: 147px;
+  @media (max-width: 600px) {
+    width: 135px;
     z-index:0;
   }
 `;
