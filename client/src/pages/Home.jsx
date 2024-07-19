@@ -33,6 +33,10 @@ const Img = styled.img`
   width: 100%;
   max-width: 1200px;
 `;
+const Sub = styled.div`
+color: #dada0f;
+`;
+
 const Title = styled.div`
   font-size: 28px;
   font-weight: 500;
@@ -75,7 +79,7 @@ const Home = () => {
       </Section>
 
       <Section>
-        <h4>TOP FOODS</h4>
+        <Sub>TOP FOODS</Sub>
         <Title>Food Categories</Title>
         <CardWrapper>
 

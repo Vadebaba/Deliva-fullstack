@@ -38,9 +38,9 @@ const NavLogo = styled(LinkR)`
   display: flex;
   align-items: center;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 11px;
   text-decoration: none;
-  color: black;
+  color:#a3c80f ;
 `;
 const Logo = styled.img`
   height: 34px;

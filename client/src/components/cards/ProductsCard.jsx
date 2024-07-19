@@ -22,7 +22,7 @@ const Card = styled.div`
   transition: all 0.3s ease-out;
   cursor: pointer;
   @media (max-width: 500px) {
-    width: 147px;
+    width: 290px;
     z-index:0;
   }
 `;
@@ -34,7 +34,7 @@ const Image = styled.img`
   object-fit: cover;
   transition: all 0.3s ease-out;
   @media (max-width: 500px) {
-    height: 200px;
+    height: 295px;
   }
 `;
 
