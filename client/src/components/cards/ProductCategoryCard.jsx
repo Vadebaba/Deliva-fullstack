@@ -9,7 +9,7 @@ const Card = styled.div`
   transition: all 0.3s ease-out;
   cursor: pointer;
   @media (max-width: 600px) {
-    width: 135px;
+    width: 307px;
     z-index:0;
   }
 `;
@@ -20,8 +20,8 @@ const Image = styled.img`
   border-radius: 6px;
   object-fit: cover;
   transition: all 0.3s ease-out;
-  @media (max-width: 500px) {
-    height: 200px;
+  @media (max-width: 600px) {
+    height: 240px;
   }
 `;
 const Top = styled.div`

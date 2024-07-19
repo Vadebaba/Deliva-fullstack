@@ -18,13 +18,13 @@ const Container = styled.div`
   flex-direction: column;
   gap: 30px;
   @media (max-width: 768px) {
-    padding: 20px 12px;
+    padding: 17px 8px;
   }
   background: ${({ theme }) => theme.bg};
 `;
 const Section = styled.div`
   max-width: 1400px;
-  padding: 0 20px;
+  padding: 0 13px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -75,6 +75,7 @@ const Home = () => {
       </Section>
 
       <Section>
+        <h4>TOP FOODS</h4>
         <Title>Food Categories</Title>
         <CardWrapper>
 
