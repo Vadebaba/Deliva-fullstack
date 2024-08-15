@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lightTheme } from "./utils/Themes";
@@ -10,37 +11,53 @@ import Cart from "./pages/Cart";
 import FoodDetails from "./pages/FoodDetails";
 import FoodListing from "./pages/FoodListing";
 import { useSelector } from "react-redux";
-//import footer from "./components/footer";
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 
 
 const Container = styled.div``;
 
+
 function App() {
+ 
+    React.useEffect(() => {
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-sine",
+        delay: 100,
+        offset: 100,
+      });
+      AOS.refresh();
+    }, []);
+  
+
   const { currentUser } = useSelector((state) => state.user);
- //const { open, message, severity } = useSelector((state) => state.snackbar);
+  //const { open, message, severity } = useSelector((state) => state.snackbar);
   const [openAuth, setOpenAuth] = useState(false);
+
+
   return (
     <ThemeProvider theme={lightTheme}>
       <BrowserRouter>
         <Container>
           <Navbar
-           setOpenAuth={setOpenAuth}
+            setOpenAuth={setOpenAuth}
             openAuth={openAuth}
             currentUser={currentUser}
           />
-
-         <Routes>
+         
+          < Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/favorite" exact element={<Favourites />} />
             <Route path="/cart" exact element={<Cart />} />
             <Route path="/dishes/:id" exact element={<FoodDetails />} />
             <Route path="/dishes" exact element={<FoodListing />} />
           </Routes>
+
           {openAuth && (
             <Authentication setOpenAuth={setOpenAuth} openAuth={openAuth} />
           )}
-
 
         </Container>
       </BrowserRouter>

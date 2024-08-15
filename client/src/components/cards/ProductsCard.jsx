@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { CircularProgress, Rating } from "@mui/material";
 import {
-  AddShoppingCartOutlined,
+ // AddShoppingCartOutlined,
   FavoriteBorder,
   FavoriteRounded,
   ShoppingBagOutlined,
-  ShoppingCart,
+  //ShoppingCart,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { addToFavourite, deleteFromFavourite, getFavourite, addToCart, } from "../../api";

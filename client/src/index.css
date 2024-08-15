@@ -24,3 +24,11 @@ body {
   border-radius: 6px;
   height: 50px;
 }
+
+.inner-container{
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 6px solid #5d77d6;
+  text-align: center;
+}

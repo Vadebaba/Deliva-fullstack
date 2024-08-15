@@ -1,27 +1,30 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link as LinkR, NavLink } from "react-router-dom";
-import LogoImg from "../utils/Images/Logo.png";
-import {FavoriteBorder,MenuRounded,SearchRounded,ShoppingCartOutlined} from "@mui/icons-material";
+//import LogoImg from "../utils/Images/Logo.png";
+import { FavoriteBorder, MenuRounded, SearchRounded, ShoppingCartOutlined } from "@mui/icons-material";
 import Button from "./Button";
 import { Avatar } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { logout } from "../redux/reducers/UserSlice";
+import head from "../utils/Images/header-bg.jpg";
+
+
 
 const Nav = styled.div`
-  background-color: ${({ theme }) => theme.bg};
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
   font-size: 1rem;
-  position: sticky;
   top: 0;
   z-index: 10;
-  color: white;
+   width: 100%;
+    font-size: 1rem;
+    background-image: linear-gradient(167deg,#000, #0000),  url(${head});
+            font-size: 20px;
+            background-size: cover;
+color: whitesmoke;
 `;
+
 const NavContainer = styled.div`
-  width: 100%;
   max-width: 1400px;
   padding: 0 55px;
   display: flex;
@@ -42,9 +45,9 @@ const NavLogo = styled(LinkR)`
   text-decoration: none;
   color:#a3c80f ;
 `;
-const Logo = styled.img`
+/*const Logo = styled.img`
   height: 34px;
-`;
+`;*/
 const NavItems = styled.ul`
   width: 100%;
   display: flex;
@@ -60,7 +63,7 @@ const NavItems = styled.ul`
 const Navlink = styled(NavLink)`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.text_primary};
+  color: whitesmoke;
   font-weight: 500;
   cursor: pointer;
   transition: all 1s slide-in;
@@ -141,18 +144,91 @@ const TextButton = styled.span`
 
 
 
+const P = styled.div`
+font-size:3.5rem;
+margin-top: 2rem;
+
+@media screen and (max-width: 768px) {
+  font-size: 3rem;
+    margin-top: 2rem;
+}   
+`;
+
+
+const Inner = styled.div`
+    padding: 7rem;
+    text-align: center;
+     margin-bottom: 1rem;
+
+    @media screen and (max-width: 768px) {
+    padding: 3rem;
+  } 
+`;
+
+
+const Primary = styled.div`
+    background-color: #EB0029;
+    border: 2px solid #EB0029;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+      cursor: pointer;
+
+      &:hover {
+    background-color: #9d1e34;
+  border-color: #9d1e34;
+  }
+
+   @media screen and (max-width: 768px) {
+    padding: .5rem;
+  }
+  `;
+
+const Secondary = styled.div`
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+      cursor: pointer;
+
+  &:hover {
+   background-color: rgba(255, 255, 255, 0.1);
+  }
+      
+   @media screen and (max-width: 768px) {
+    padding: .5rem;
+  }
+  `;
+
+
+const Btn = styled.div`
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    color: var(--white);
+    
+    transition: 0.3s;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  `;
+
+
+
+
 const Navbar = ({ setOpenAuth, openAuth, currentUser }) => {
+  ;
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   return (
     <Nav>
       <NavContainer>
-      <MobileIcon onClick={() => setIsOpen(!isOpen)}>
+        <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
         </MobileIcon>
 
         <NavLogo to="/">
-        <h1>Deliva</h1>
+          <h1>Deliva</h1>
         </NavLogo>
 
         <MobileIcons>
@@ -243,8 +319,22 @@ const Navbar = ({ setOpenAuth, openAuth, currentUser }) => {
             </>
           )}
         </ButtonContainer>
-           
-        </NavContainer>
+
+
+
+
+      </NavContainer>
+
+      <Inner>
+        <P data-aos="fade-up">why stay hugry when you can Order
+          <br />
+          from DELIVA</P>
+        <p>Download Deliva app now </p>
+        <Btn data-aos="fade-up">
+          <Primary>Play Store</Primary>
+          <Secondary>App Store</Secondary>
+        </Btn>
+      </Inner>
     </Nav>
   );
 };

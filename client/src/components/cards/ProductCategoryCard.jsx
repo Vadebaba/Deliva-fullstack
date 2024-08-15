@@ -41,7 +41,7 @@ const Top = styled.div`
 const Menu = styled.div`
   width: 100%;
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   color: ${({ theme }) => theme.text_primary};
   bottom: 0px;
   left: 50;
@@ -57,6 +57,7 @@ const Button = styled.div`
   border-radius: 12px;
   text-align: center;
   font-weight: 500;
+  z-index: 1;
   background: linear-gradient(
     to top,
     ${({ theme }) => theme.black} 30%,
@@ -68,7 +69,7 @@ const Button = styled.div`
 `;
 const Sale = styled.div`
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   color: ${({ theme }) => theme.text_primary};
   top: 10px;
   right: 10px;
