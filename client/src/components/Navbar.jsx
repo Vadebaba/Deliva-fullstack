@@ -64,7 +64,7 @@ const Navlink = styled(NavLink)`
   display: flex;
   align-items: center;
   color: whitesmoke;
-  font-weight: 500;
+  font-weight: 300;
   cursor: pointer;
   transition: all 1s slide-in;
   text-decoration: none;
