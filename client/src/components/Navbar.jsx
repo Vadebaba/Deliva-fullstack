@@ -161,7 +161,7 @@ const Inner = styled.div`
      margin-bottom: 1rem;
 
     @media screen and (max-width: 768px) {
-    padding: 3rem;
+    padding: 1.5rem;
   } 
 `;
 
@@ -326,10 +326,10 @@ const Navbar = ({ setOpenAuth, openAuth, currentUser }) => {
       </NavContainer>
 
       <Inner>
-        <P data-aos="fade-up">why stay hugry when you can Order
+        <P data-aos="fade-up">Why stay hungry when you can Order
           <br />
           from DELIVA</P>
-        <p>Download Deliva app now </p>
+        <p>Download Deliva app now ❗ </p>
         <Btn data-aos="fade-up">
           <Primary>Play Store</Primary>
           <Secondary>App Store</Secondary>

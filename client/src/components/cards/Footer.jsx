@@ -10,7 +10,6 @@ import { NavLink } from "react-router-dom";
 
 const Foot = styled.div`  
     max-width: 81.5rem;
-
   @media (min-width: 768px) {    
         max-height: 848px;
 }
@@ -36,7 +35,8 @@ const Section = styled.div`
 border: 3px solid #847c7c;
     border-width: 1px 0px 0px;
     border-radius: 2px;
-    padding-top:2rem;
+    padding-top: 2rem;
+    background: #00000066;
 `;
 
 
@@ -123,7 +123,7 @@ padding-right: 4rem;
 const Footer = () => {
 
   return (
-  <Foot>
+    <Foot>
       <Foote>
         <Section>
           <Container>
@@ -167,8 +167,8 @@ const Footer = () => {
 
             <p className="text-muted-foreground">
               ©{" "}
-              <a href="/">Deliva</a>.
-              All rights reserved. 2024-present.
+            <h3> Deliva.</h3>
+              All rights reserved. 2024.
             </p>
           </Subcon>
         </Section>
