@@ -19,6 +19,12 @@ const Platforms = styled.div`
     gap: max(2vw, 10px);
     margin-top: 40px;
 
+     @media (max-width:750px) {
+    flex-direction: column;
+    width: 180px;
+    padding-left: 70px;
+  }
+
 `
 
 const PlayImg = styled.img`
