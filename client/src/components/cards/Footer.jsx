@@ -99,7 +99,7 @@ const Navlink = styled(NavLink)`
   display: flex;
   align-items: center;
   color: black;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: all 1s slide-in;
   text-decoration: none;
@@ -111,7 +111,7 @@ const Navlink = styled(NavLink)`
 const Para = styled.div`
 padding-right: 4rem;
   color: black;
-  font-weight: 500;
+  font-weight: 400;
   &:hover {
     
   }
@@ -129,7 +129,7 @@ const Footer = () => {
           <Container>
             <Con>
               <NavLogo to="/">
-                <h1>Deliva</h1>
+                <h1>DELIVA</h1>
               </NavLogo>
 
               <Para>
@@ -143,7 +143,6 @@ const Footer = () => {
               <Navlink to="/">Home</Navlink>
               <Navlink to="/dishes">Dishes</Navlink>
               <Navlink to="/orders">Orders</Navlink>
-              <Navlink to="/About">Dishes</Navlink>
               <Navlink to="/">Help</Navlink>
             </Div>
 
@@ -165,15 +164,13 @@ const Footer = () => {
               <img src={SocialYoutube} alt="socialyou" />
             </Social>
 
-            <p className="text-muted-foreground">
-              ©{" "}
-            <h3> Deliva.</h3>
-              All rights reserved. 2024.
+            <p>
+            Copyright © 2024 Deliva. All rights reserved.
             </p>
           </Subcon>
         </Section>
       </Foote>
-    </Foot>
+    </Foot >
   );
 };
 

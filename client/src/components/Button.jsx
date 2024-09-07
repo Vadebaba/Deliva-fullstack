@@ -16,11 +16,18 @@ const Button = styled.div`
   padding: 16px 26px;
   box-shadow: 1px 20px 35px 0px ${({ theme }) => theme.primary + 40};
   border: 1px solid ${({ theme }) => theme.primary};
+
+
+ &:hover {
+   background-color: #82091e;
+   border: 1px solid #82091e;
+  }
+
   @media (max-width: 600px) {
     padding: 8px 12px;
   }
 
-  ${({ type, theme }) =>
+${({ type, theme }) =>
     type === "secondary"
       ? `
   background: ${theme.secondary};
@@ -30,40 +37,31 @@ border: 1px solid ${({ theme }) => theme.secondary};
   background: ${theme.primary};
 `}
 
-  ${({ isDisabled }) =>
-    isDisabled &&
-    `
+${({ isDisabled }) => isDisabled && `
   opacity: 0.8;
   cursor: not-allowed;
+`}
 
-  `}
-  ${({ isLoading }) =>
-    isLoading &&
-    `
+${({ isLoading }) => isLoading && `
     opacity: 0.8;
   cursor: not-allowed;
 `}
-${({ flex }) =>
-    flex &&
-    `
+
+${({ flex }) => flex && `
     flex: 1;
 `}
 
-${({ small }) =>
-    small &&
-    `
+${({ small }) => small && `
 padding: 10px 28px;
 `}
-  ${({ outlined, theme }) =>
-    outlined &&
-    `
+
+${({ outlined, theme }) => outlined && `
 background: transparent;
 color: ${theme.primary};
   box-shadow: none;
 `}
-  ${({ full }) =>
-    full &&
-    `
+
+${({ full }) => full && `
   width: 100%;`}
 `;
 
@@ -80,6 +78,7 @@ const button = ({
   outlined,
   full,
 }) => {
+
   return (
     <Button
       onClick={() => !isDisabled && !isLoading && onClick()}

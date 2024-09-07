@@ -1,11 +1,10 @@
 import { Modal } from "@mui/material";
 import React, { useState } from "react";
 import styled from "styled-components";
-import LogoImage from "../utils/Images/Logo.png";
-import AuthImage from "../utils/Images/AuthImage.jpg";
 import { Close } from "@mui/icons-material";
 import SignIn from "../components/SignIn";
 import SignUp from "../components/SignUp";
+
 
 const Container = styled.div`
   flex: 1;
@@ -13,30 +12,11 @@ const Container = styled.div`
   display: flex;
   background: ${({ theme }) => theme.bg};
 `;
-const Left = styled.div`
-  flex: 1;
-  position: relative;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
 
-const Logo = styled.img`
-  position: absolute;
-  top: 40px;
-  left: 60px;
-  z-index: 10;
-`;
-const Image = styled.img`
-  position: relative;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-`;
 
 const Right = styled.div`
   position: relative;
-  flex: 0.9;
+  flex: 1;
   display: flex;
   flex-direction: column;
   padding: 40px;
@@ -60,6 +40,8 @@ const CloseButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor:pointer;
+
   &:hover {
     background: ${({ theme }) => theme.primary + 20};
   }
@@ -83,15 +65,14 @@ const TextButton = styled.div`
   font-weight: 600;
 `;
 
+
+
 const Authentication = ({ openAuth, setOpenAuth }) => {
   const [login, setLogin] = useState(true);
   return (
     <Modal open={openAuth} onClose={() => setOpenAuth(false)}>
       <Container>
-        <Left>
-          <Logo src={LogoImage} />
-          <Image src={AuthImage} />
-        </Left>
+
         <Right>
           <CloseButton>
             <Close onClick={() => setOpenAuth(false)} />

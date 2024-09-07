@@ -7,26 +7,24 @@ import Button from "./Button";
 import { Avatar } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { logout } from "../redux/reducers/UserSlice";
-import head from "../utils/Images/header-bg.jpg";
-
 
 
 const Nav = styled.div`
-  height: 100vh;
+  height: 12vh;
   font-size: 1rem;
   top: 0;
   z-index: 10;
    width: 100%;
     font-size: 1rem;
-    background-image: linear-gradient(167deg,#000, #0000),  url(${head});
-            font-size: 20px;
-            background-size: cover;
+    background:black;
+     font-size: 20px;
+  background-size: cover;
 color: whitesmoke;
 `;
 
 const NavContainer = styled.div`
   max-width: 1400px;
-  padding: 0 55px;
+  padding: 7px 55px;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -43,7 +41,7 @@ const NavLogo = styled(LinkR)`
   font-weight: 600;
   font-size: 11px;
   text-decoration: none;
-  color:#a3c80f ;
+  color:#EB0029 ;
 `;
 /*const Logo = styled.img`
   height: 34px;
@@ -144,78 +142,6 @@ const TextButton = styled.span`
 
 
 
-const P = styled.div`
-font-size:3.5rem;
-margin-top: 2rem;
-
-@media screen and (max-width: 768px) {
-  font-size: 3rem;
-    margin-top: 2rem;
-}   
-`;
-
-
-const Inner = styled.div`
-    padding: 7rem;
-    text-align: center;
-     margin-bottom: 1rem;
-
-    @media screen and (max-width: 768px) {
-    padding: 1.5rem;
-  } 
-`;
-
-
-const Primary = styled.div`
-    background-color: #EB0029;
-    border: 2px solid #EB0029;
-    padding: 1rem 2.5rem;
-    border-radius: 10px;
-      cursor: pointer;
-
-      &:hover {
-    background-color: #9d1e34;
-  border-color: #9d1e34;
-  }
-
-   @media screen and (max-width: 768px) {
-    padding: .5rem;
-  }
-  `;
-
-const Secondary = styled.div`
-    background-color: transparent;
-    border: 2px solid #ffffff;
-    padding: 1rem 2.5rem;
-    border-radius: 10px;
-      cursor: pointer;
-
-  &:hover {
-   background-color: rgba(255, 255, 255, 0.1);
-  }
-      
-   @media screen and (max-width: 768px) {
-    padding: .5rem;
-  }
-  `;
-
-
-const Btn = styled.div`
-    outline: none;
-    border: none;
-    font-size: 1.1rem;
-    color: var(--white);
-    
-    transition: 0.3s;
-    display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  `;
-
-
-
-
 const Navbar = ({ setOpenAuth, openAuth, currentUser }) => {
   ;
   const [isOpen, setIsOpen] = useState(false);
@@ -228,7 +154,7 @@ const Navbar = ({ setOpenAuth, openAuth, currentUser }) => {
         </MobileIcon>
 
         <NavLogo to="/">
-          <h1>Deliva</h1>
+          <h1>DELIVA</h1>
         </NavLogo>
 
         <MobileIcons>
@@ -319,22 +245,7 @@ const Navbar = ({ setOpenAuth, openAuth, currentUser }) => {
             </>
           )}
         </ButtonContainer>
-
-
-
-
       </NavContainer>
-
-      <Inner>
-        <P data-aos="fade-up">Why stay hungry when you can Order
-          <br />
-          from DELIVA</P>
-        <p>Download Deliva app now ❗ </p>
-        <Btn data-aos="fade-up">
-          <Primary>Play Store</Primary>
-          <Secondary>App Store</Secondary>
-        </Btn>
-      </Inner>
     </Nav>
   );
 };

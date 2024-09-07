@@ -8,7 +8,8 @@ import { getAllProducts } from "../api";
 import { CircularProgress } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import head from "../utils/Images/header-bg.jpg";
+import Appdownload from "../components/cards/Appdownload";
 
 const Container = styled.div`
   height: 100%;
@@ -32,7 +33,6 @@ const Section = styled.div`
 `;
 
 const Sub = styled.div`
-
 &:after{
 content:'';
 height:10px;
@@ -81,6 +81,82 @@ flex-wrap:wrap;
 `;
 
 
+
+
+
+const Inner = styled.div`
+    padding: 7rem;
+    text-align: center;
+     margin-bottom: 1rem;
+
+ background-image: linear-gradient(167deg,#000, #0000),  url(${head});
+            font-size: 20px;
+            background-size: cover;
+color: whitesmoke;
+
+    @media screen and (max-width: 768px) {
+    padding: 1.5rem;
+  } 
+`;
+
+
+const Primary = styled.div`
+    background-color: #EB0029;
+    border: 2px solid #EB0029;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+      cursor: pointer;
+
+      &:hover {
+    background-color: #9d1e34;
+  border-color: #9d1e34;
+  }
+
+   @media screen and (max-width: 768px) {
+    padding: .5rem;
+  }
+  `;
+
+const Secondary = styled.div`
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+      cursor: pointer;
+
+  &:hover {
+   background-color: rgba(255, 255, 255, 0.1);
+  }
+      
+   @media screen and (max-width: 768px) {
+    padding: .5rem;
+  }
+  `;
+
+
+const Btn = styled.div`
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    color: var(--white);   
+    transition: 0.3s;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  `;
+
+
+const P = styled.div`
+font-size:3.5rem;
+
+@media screen and (max-width: 768px) {
+  font-size: 3rem;
+    margin-top: 2rem;
+}   
+`;
+
+
 const Home = () => {
 
   React.useEffect(() => {
@@ -112,6 +188,18 @@ const Home = () => {
 
   return (
     <>
+
+      <Inner>
+        <P data-aos="fade-up">Why stay hungry when you can Order
+          <br />
+          from DELIVA</P>
+        <p>Download Deliva app now ❗ </p>
+        <Btn data-aos="fade-up">
+          <Primary>Play Store</Primary>
+          <Secondary>App Store</Secondary>
+        </Btn>
+      </Inner>
+
       <Container>
         <Section data-aos="fade-up">
           <Sub>TOP FOODS</Sub>
@@ -137,6 +225,10 @@ const Home = () => {
               ))}
             </CardWrapper>
           )}
+        </Section>
+
+        <Section>
+          <Appdownload />
         </Section>
 
         <Section>
